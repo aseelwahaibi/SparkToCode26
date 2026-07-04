@@ -64,6 +64,7 @@ class Program
         */
 
 // Task 5 - Number Guessing Game
+/*
         int SecretNumber = 42;
         int Gnumber; 
         int attempts = 0;
@@ -92,7 +93,31 @@ class Program
 
         Console.WriteLine("Number of ayyempts:  " + attempts);
 
+*/
 
+// Task 6 - Safe Division Calculator
+        try
+        {
+            Console.Write("first number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+            Console.Write("second number: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+            int D = firstNumber / secondNumber;
+            Console.Write("result = " + D);
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("you can't divide by zero");
+
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("invalid input");
+        }
+        
+        
+
+    
 
 
 
