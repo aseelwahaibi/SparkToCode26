@@ -34,11 +34,11 @@ class Program
         
         //Task 3 - Multiplication Table
         Console.Write(" enter number:  ");
-        int mN = int.Parse(Console.ReadLine());
-
-        for (mN = 1; mN == 10; mN**)
+        int N = int.Parse(Console.ReadLine());
+        
+        for (int M= 1; M <= 10; M++)
         {
-            
+            Console.WriteLine(N + " x " + M + " = " + (N * M));
         }
         
         
