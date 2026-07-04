@@ -33,6 +33,7 @@ class Program
         
         
         //Task 3 - Multiplication Table
+        /*
         Console.Write(" enter number:  ");
         int n = int.Parse(Console.ReadLine());
         
@@ -40,8 +41,26 @@ class Program
         {
             Console.WriteLine(M + " X " +n +" = " + M*n  );
         }
+        */
+        
+        //Task 4 - Password Retry
+
+        string password = "Spark2026";
+        string userinput=""; 
         
         
+        while (userinput != password)
+        {
+            Console.Write("enter password:  ");
+            userinput = Console.ReadLine();
+        }
+
+        if (userinput != password)
+        {
+            Console.Write("Incorrect password, try again");
+        }
+        
+        Console.WriteLine("Access Granted");
         
     }
 
