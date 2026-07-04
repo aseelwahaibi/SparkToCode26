@@ -1,4 +1,6 @@
-﻿namespace Taskk2_Solutions;
+﻿using System.Linq.Expressions;
+
+namespace Taskk2_Solutions;
 
 class Program
 {
@@ -96,6 +98,7 @@ class Program
 */
 
 // Task 6 - Safe Division Calculator
+/*
         try
         {
             Console.Write("first number: ");
@@ -115,9 +118,59 @@ class Program
             Console.WriteLine("invalid input");
         }
         
-        
+        */
 
-    
+
+        // task 7 Repeating Menu with Exit Option
+
+        int option = 0;
+        bool running = true;
+
+        while (running==true)
+        {
+            Console.WriteLine("Choose an option: ");
+            Console.WriteLine("1) say hello!");
+            Console.WriteLine("2) show greetings!");
+            Console.WriteLine("3) exit");
+            Console.Write("Enter your choice: ");
+
+            try
+            {
+                option = int.Parse(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("Hello!");
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Good morning!");
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Exiting program...");
+                        running = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice, reenter a number from 1 to 3.");
+                        break;
+                }
+
+
+
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please enter a valid number.");
+            }
+            
+            
+        }
+
+
+
+
 
 
 
