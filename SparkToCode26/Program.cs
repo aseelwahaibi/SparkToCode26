@@ -79,7 +79,7 @@ class Program
         
         
         //Task 6 - Password Strength Checker
-        
+        /*
         Console.WriteLine("enter your password : ");
         string password = Console.ReadLine();
         
@@ -102,8 +102,30 @@ class Program
         {
             Console.WriteLine("weak:  your password is shorter than 8 characters ");
         }
+        */
         
+        
+        
+       //Task 7 - Clean Name Comparator
+       /*
+       Console.Write("Enter the first name: ");
+       string name1 = Console.ReadLine();
        
+       Console.Write("Enter the second name again: ");
+       string name2 = Console.ReadLine();
+       
+       string cleanName1 = name1.Trim().ToUpper();
+       string cleanName2 = name2.Trim().ToUpper();
+       
+       if (cleanName1 == cleanName2)
+       {
+           Console.WriteLine("Match");
+       }
+       else
+       {
+           Console.WriteLine("No Match");
+       }
+       */
         
         
     }
