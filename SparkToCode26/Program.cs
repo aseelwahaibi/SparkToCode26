@@ -60,6 +60,7 @@ class Program
         */
         
         //Task 5 - Grade Rounding System
+        /*
         Console.WriteLine("enter exam score in decimal:  ");
         decimal examScore = decimal.Parse(Console.ReadLine());
         
@@ -74,6 +75,36 @@ class Program
         {
             Console.WriteLine("Fail");
         }
+       */
+        
+        
+        //Task 6 - Password Strength Checker
+        
+        Console.WriteLine("enter your password : ");
+        string password = Console.ReadLine();
+        
+        int length = password.Length;
+        bool contain = password.Contains("password");
+
+        if (contain == true && length <= 8)
+        {
+            Console.WriteLine("weak:  your password should not contain a word password and shorter than 8 characters");
+        }
+        else  if (contain == false && length >= 8)
+        {
+            Console.WriteLine("strong:  your password is long ");
+        }
+        else if (contain == true && length >= 8)
+        {
+            Console.WriteLine("weak:  remove the word password ");
+        }
+        else if (contain == false && length <= 8)
+        {
+            Console.WriteLine("weak:  your password is shorter than 8 characters ");
+        }
+        
        
+        
+        
     }
 }
