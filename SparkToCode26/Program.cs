@@ -46,6 +46,7 @@ class Program
         
         
         //Task 4 - Subscription End Date
+        /*
         Console.WriteLine("enter the number of a free trail : ");
         int n = int.Parse(Console.ReadLine());
         
@@ -56,8 +57,23 @@ class Program
         
         string trailend = end.ToString("yyyy-MM-dd");
         Console.WriteLine("the end of the trail  is  in :  "+trailend);
+        */
         
+        //Task 5 - Grade Rounding System
+        Console.WriteLine("enter exam score in decimal:  ");
+        decimal examScore = decimal.Parse(Console.ReadLine());
         
+        decimal round = Math.Round(examScore, 0);
+        Console.WriteLine("the result is :  " + round);
+
+        if (round >= 60)
+        {
+            Console.WriteLine("Pass");
+        }
+        else
+        {
+            Console.WriteLine("Fail");
+        }
        
     }
 }
