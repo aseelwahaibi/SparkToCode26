@@ -18,7 +18,7 @@ class Program
         */
         
         //Task 2 - Power & Root Explorer
-        
+        /*
         Console.WriteLine("enter a number:  ");
         int a = int.Parse(Console.ReadLine());
         
@@ -27,6 +27,21 @@ class Program
         
         Console.WriteLine ("The power of " + a + " is " + p);
         Console.WriteLine ("the square root of  " +a+ " is " +  s);
+        */
+        
+        
+        // Task 3 - Name Formatter 
+        
+        Console.WriteLine("enter your name:  ");
+        string name = Console.ReadLine();
+        
+        string upper =  name.ToUpper();
+        string lower = name.ToLower();
+        int length = name.Length;
+        
+        Console.WriteLine("your name  in upper case : " + upper);
+        Console.WriteLine("your name  in lower case: " + lower);
+        Console.WriteLine("the length of your name is : " + length);
         
         
        
