@@ -32,7 +32,7 @@ class Program
         
         // Task 3 - Name Formatter 
         
-        Console.WriteLine("enter your name:  ");
+        /* Console.WriteLine("enter your name:  ");
         string name = Console.ReadLine();
         
         string upper =  name.ToUpper();
@@ -42,6 +42,20 @@ class Program
         Console.WriteLine("your name  in upper case : " + upper);
         Console.WriteLine("your name  in lower case: " + lower);
         Console.WriteLine("the length of your name is : " + length);
+        */
+        
+        
+        //Task 4 - Subscription End Date
+        Console.WriteLine("enter the number of a free trail : ");
+        int n = int.Parse(Console.ReadLine());
+        
+        DateTime today = DateTime.Today;
+        Console.WriteLine("today is : " + today);
+        
+        DateTime end = today.AddDays(n);
+        
+        string trailend = end.ToString("yyyy-MM-dd");
+        Console.WriteLine("the end of the trail  is  in :  "+trailend);
         
         
        
