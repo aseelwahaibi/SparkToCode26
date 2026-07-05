@@ -151,6 +151,7 @@ class Program
        */
        
        // Task 9 - Round Up / Round Down Explorer
+       /*
        Console.WriteLine("enter a decimal number: ");
        double number = double.Parse(Console.ReadLine());
        
@@ -161,8 +162,30 @@ class Program
       Console.WriteLine("nearest whole number :   " +round);
       Console.WriteLine("always rounded up :   " +rup);
       Console.WriteLine("always rounded down :   " +rdown);
-
-      
+*/
+       
+       //Task 10 - Word Position Finder
+       
+       Console.WriteLine("write a sentence : ");
+       string sentence = Console.ReadLine();
+       
+       Console.Write("enter a word to search for : ");
+       string word = Console.ReadLine();
+       
+       int first = sentence.IndexOf(word);
+       int last = sentence.LastIndexOf(word);
+       
+       if (first == -1)
+       {
+     
+           Console.WriteLine("Result: The word was not found.");
+       }
+       else
+       {
+           Console.WriteLine("First Occurrence Position :  " + first );
+           Console.WriteLine($"Last Occurrence Position :  " + last);
+       }
+       
       
        
        
