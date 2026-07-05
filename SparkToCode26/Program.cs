@@ -165,7 +165,7 @@ class Program
 */
        
        //Task 10 - Word Position Finder
-       
+       /*
        Console.WriteLine("write a sentence : ");
        string sentence = Console.ReadLine();
        
@@ -185,9 +185,49 @@ class Program
            Console.WriteLine("First Occurrence Position :  " + first );
            Console.WriteLine($"Last Occurrence Position :  " + last);
        }
+       */
        
+       //Task 11 - One-Time Password (OTP) Generator
+       
+       Random rnd = new Random();
+       int otp = rnd.Next(1000, 10000);
+       Console.WriteLine("your OTP is: " + otp);
+       bool verified = false;
+
+       for (int attempt = 1; attempt <= 3; attempt++)
+       {
+           Console.Write("Enter OTP:  ");
+           int userotp = int.Parse(Console.ReadLine()) ;
+
+           try
+           {
+               if (userotp == otp)
+               {
+                   Console.WriteLine("Verified");
+                   verified = true;
+                   break;
+
+               }
+               else
+               {
+                   Console.WriteLine("Incorrect OTP");
+               }
+
+
+           }
+           catch (FormatException)
+           {
+               Console.WriteLine("Invalid input");
+               
+           }
+           
+           
+       }
       
-       
+       if (verified == false)
+       {
+           Console.WriteLine("Verification Failed");
+       } 
        
            
        
