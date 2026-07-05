@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using System.Runtime;
 
 namespace Taskk2_Solutions;
 
@@ -122,7 +123,7 @@ class Program
 
 
         // task 7 Repeating Menu with Exit Option
-
+/*
         int option = 0;
         bool running = true;
 
@@ -168,7 +169,26 @@ class Program
             
         }
 
+*/
 
+// Task 8 - Sum of Even Numbers Only
+/*
+    Console.WriteLine("enter a positive number:  ");
+    int number = int.Parse(Console.ReadLine());
+    
+    int sum = 0;
+
+    for (int S = 1; S <= number; S++)
+    {
+        if (S % 2 == 0)
+        {
+            sum += S;
+        }
+        
+    }
+    Console.WriteLine("the sum of positive number :  "+sum);
+
+*/
 
 
 
