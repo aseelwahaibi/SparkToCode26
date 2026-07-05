@@ -1,4 +1,6 @@
-﻿namespace SparkToCode26;
+﻿using Microsoft.VisualBasic;
+
+namespace SparkToCode26;
 
 class Program
 {
@@ -189,6 +191,7 @@ class Program
        
        //Task 11 - One-Time Password (OTP) Generator
        
+       /*
        Random rnd = new Random();
        int otp = rnd.Next(1000, 10000);
        Console.WriteLine("your OTP is: " + otp);
@@ -229,12 +232,38 @@ class Program
            Console.WriteLine("Verification Failed");
        } 
        
-           
+         */
+       
+       //task 12 -  Birthday Insights
        
        
+       Console.Write("Enter your birthdate (YYYY-MM-DD): ");
+       string BD = Console.ReadLine();
+       DateTime BDt = DateTime.Parse(BD);
+       DateTime today = DateTime.Today;
+       string week = BDt.DayOfWeek.ToString();
+       int age = today.Year -BDt.Year;
+
+       if (today.Month < BDt.Month)
+       {
+           age = age - 1;
+       }
+       else if (today.Month == BDt.Month)
+       {
+           if (today.Day < BDt.Day)
+           {
+               age = age - 1;
+           }
+       }
+       Console.WriteLine("Your calculated age is: " +age  );
+       Console.WriteLine($"You were born on a: " + BDt.DayOfWeek);
        
        
-        
-        
+
+
+
+
+
+
     }
 }
