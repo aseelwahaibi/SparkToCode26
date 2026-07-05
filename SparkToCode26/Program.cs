@@ -129,7 +129,7 @@ class Program
        
        
        //Task 8 - Membership Expiry Checker
-       
+       /*
        Console.Write("Enter membership start date (YYYY-MM-DD): ");
        string start = Console.ReadLine();
        DateTime startDate = DateTime.Parse(start);
@@ -148,6 +148,23 @@ class Program
        {
            Console.WriteLine("Your membership is active  ");
        }
+       */
+       
+       // Task 9 - Round Up / Round Down Explorer
+       Console.WriteLine("enter a decimal number: ");
+       double number = double.Parse(Console.ReadLine());
+       
+       double round = Math.Round(number, 3);
+       double rup =Math.Ceiling(number);
+       double rdown = Math.Floor(number);
+       
+      Console.WriteLine("nearest whole number :   " +round);
+      Console.WriteLine("always rounded up :   " +rup);
+      Console.WriteLine("always rounded down :   " +rdown);
+
+      
+      
+       
        
            
        
