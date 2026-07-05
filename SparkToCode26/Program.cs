@@ -1,9 +1,269 @@
-﻿namespace SparkToCode26;
+﻿using Microsoft.VisualBasic;
+
+namespace SparkToCode26;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        //Task 1 - Absolute Difference
+        /*
+        Console.WriteLine("enter the first number: ");
+        int a = int.Parse(Console.ReadLine());
+        Console.WriteLine("enter the second number: ");
+        int b = int.Parse(Console.ReadLine());
+        
+        int sub = a - b;
+        decimal abs = Math.Abs(sub);
+        Console.WriteLine("Subtraction resukt is: " + sub);
+        Console.WriteLine("Absolute value :  "+abs);
+        */
+        
+        //Task 2 - Power & Root Explorer
+        /*
+        Console.WriteLine("enter a number:  ");
+        int a = int.Parse(Console.ReadLine());
+        
+        double p = Math.Pow(a, 2);
+        double s = Math.Sqrt (a);
+        
+        Console.WriteLine ("The power of " + a + " is " + p);
+        Console.WriteLine ("the square root of  " +a+ " is " +  s);
+        */
+        
+        
+        // Task 3 - Name Formatter 
+        
+        /* Console.WriteLine("enter your name:  ");
+        string name = Console.ReadLine();
+        
+        string upper =  name.ToUpper();
+        string lower = name.ToLower();
+        int length = name.Length;
+        
+        Console.WriteLine("your name  in upper case : " + upper);
+        Console.WriteLine("your name  in lower case: " + lower);
+        Console.WriteLine("the length of your name is : " + length);
+        */
+        
+        
+        //Task 4 - Subscription End Date
+        /*
+        Console.WriteLine("enter the number of a free trail : ");
+        int n = int.Parse(Console.ReadLine());
+        
+        DateTime today = DateTime.Today;
+        Console.WriteLine("today is : " + today);
+        
+        DateTime end = today.AddDays(n);
+        
+        string trailend = end.ToString("yyyy-MM-dd");
+        Console.WriteLine("the end of the trail  is  in :  "+trailend);
+        */
+        
+        //Task 5 - Grade Rounding System
+        /*
+        Console.WriteLine("enter exam score in decimal:  ");
+        decimal examScore = decimal.Parse(Console.ReadLine());
+        
+        decimal round = Math.Round(examScore, 0);
+        Console.WriteLine("the result is :  " + round);
+
+        if (round >= 60)
+        {
+            Console.WriteLine("Pass");
+        }
+        else
+        {
+            Console.WriteLine("Fail");
+        }
+       */
+        
+        
+        //Task 6 - Password Strength Checker
+        /*
+        Console.WriteLine("enter your password : ");
+        string password = Console.ReadLine();
+        
+        int length = password.Length;
+        bool contain = password.Contains("password");
+
+        if (contain == true && length <= 8)
+        {
+            Console.WriteLine("weak:  your password should not contain a word password and shorter than 8 characters");
+        }
+        else  if (contain == false && length >= 8)
+        {
+            Console.WriteLine("strong:  your password is long ");
+        }
+        else if (contain == true && length >= 8)
+        {
+            Console.WriteLine("weak:  remove the word password ");
+        }
+        else if (contain == false && length <= 8)
+        {
+            Console.WriteLine("weak:  your password is shorter than 8 characters ");
+        }
+        */
+        
+        
+        
+       //Task 7 - Clean Name Comparator
+       /*
+       Console.Write("Enter the first name: ");
+       string name1 = Console.ReadLine();
+       
+       Console.Write("Enter the second name again: ");
+       string name2 = Console.ReadLine();
+       
+       string cleanName1 = name1.Trim().ToUpper();
+       string cleanName2 = name2.Trim().ToUpper();
+       
+       if (cleanName1 == cleanName2)
+       {
+           Console.WriteLine("Match");
+       }
+       else
+       {
+           Console.WriteLine("No Match");
+       }
+       */
+       
+       
+       //Task 8 - Membership Expiry Checker
+       /*
+       Console.Write("Enter membership start date (YYYY-MM-DD): ");
+       string start = Console.ReadLine();
+       DateTime startDate = DateTime.Parse(start);
+       
+       Console.WriteLine("enter the number of valid days : ");
+       int VD = int.Parse(Console.ReadLine());
+       
+       DateTime EDate = startDate.AddDays(VD);
+
+       if (EDate <= DateTime.Now)
+       {
+           Console.WriteLine("Your membership is expired ");
+       }
+
+       else if (EDate > DateTime.Now)
+       {
+           Console.WriteLine("Your membership is active  ");
+       }
+       */
+       
+       // Task 9 - Round Up / Round Down Explorer
+       /*
+       Console.WriteLine("enter a decimal number: ");
+       double number = double.Parse(Console.ReadLine());
+       
+       double round = Math.Round(number, 3);
+       double rup =Math.Ceiling(number);
+       double rdown = Math.Floor(number);
+       
+      Console.WriteLine("nearest whole number :   " +round);
+      Console.WriteLine("always rounded up :   " +rup);
+      Console.WriteLine("always rounded down :   " +rdown);
+*/
+       
+       //Task 10 - Word Position Finder
+       /*
+       Console.WriteLine("write a sentence : ");
+       string sentence = Console.ReadLine();
+       
+       Console.Write("enter a word to search for : ");
+       string word = Console.ReadLine();
+       
+       int first = sentence.IndexOf(word);
+       int last = sentence.LastIndexOf(word);
+       
+       if (first == -1)
+       {
+     
+           Console.WriteLine("Result: The word was not found.");
+       }
+       else
+       {
+           Console.WriteLine("First Occurrence Position :  " + first );
+           Console.WriteLine($"Last Occurrence Position :  " + last);
+       }
+       */
+       
+       //Task 11 - One-Time Password (OTP) Generator
+       
+       /*
+       Random rnd = new Random();
+       int otp = rnd.Next(1000, 10000);
+       Console.WriteLine("your OTP is: " + otp);
+       bool verified = false;
+
+       for (int attempt = 1; attempt <= 3; attempt++)
+       {
+           Console.Write("Enter OTP:  ");
+           int userotp = int.Parse(Console.ReadLine()) ;
+
+           try
+           {
+               if (userotp == otp)
+               {
+                   Console.WriteLine("Verified");
+                   verified = true;
+                   break;
+
+               }
+               else
+               {
+                   Console.WriteLine("Incorrect OTP");
+               }
+
+
+           }
+           catch (FormatException)
+           {
+               Console.WriteLine("Invalid input");
+               
+           }
+           
+           
+       }
+      
+       if (verified == false)
+       {
+           Console.WriteLine("Verification Failed");
+       } 
+       
+         */
+       
+       //task 12 -  Birthday Insights
+       
+       
+       Console.Write("Enter your birthdate (YYYY-MM-DD): ");
+       string BD = Console.ReadLine();
+       DateTime BDt = DateTime.Parse(BD);
+       DateTime today = DateTime.Today;
+       string week = BDt.DayOfWeek.ToString();
+       int age = today.Year -BDt.Year;
+
+       if (today.Month < BDt.Month)
+       {
+           age = age - 1;
+       }
+       else if (today.Month == BDt.Month)
+       {
+           if (today.Day < BDt.Day)
+           {
+               age = age - 1;
+           }
+       }
+       Console.WriteLine("Your calculated age is: " +age  );
+       Console.WriteLine($"You were born on a: " + BDt.DayOfWeek);
+       
+       
+
+
+
+
+
+
     }
 }
