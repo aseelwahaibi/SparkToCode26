@@ -54,7 +54,7 @@ class Program
      
      ////////////////////////////
      // Task 3 - Browsing History Stack
-     
+     /*
      Stack<string> browsing =  new Stack<string>();
      int counter = 0;
 
@@ -67,6 +67,23 @@ class Program
      
      string browsingURL = browsing.Pop();
      Console.WriteLine("You went back from:  "+browsingURL);
+     */
+     
+     //Task 4 - Customer Service Queue
+     Queue<string> customers = new Queue<string>();
+     int counter = 0;
+
+     for (counter = 0; counter < 3; counter++)
+     {
+         Console.WriteLine("enter customer name : " + (counter + 1));
+         string name = Console.ReadLine();
+         customers.Enqueue(name);
+         
+     }
+     
+     string servedCustomer = customers.Dequeue();
+     Console.WriteLine("Customer served: " + servedCustomer);
+     
      
     }
 }
