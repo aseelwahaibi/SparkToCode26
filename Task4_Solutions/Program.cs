@@ -23,9 +23,10 @@ class Program
     
     static void Main(string[] args)
     {
-        //PrintWelcome("Aseel");
+        //PrintWelcome("Aseel"); task 1
         
         /*
+         -task 2 
         Console.Write("Enter a number: ");
         int number = int.Parse(Console.ReadLine());
         int square = Square(number);
@@ -33,11 +34,14 @@ class Program
         
         */
         
+        
+        /*
+         task 3
         Console.Write("Enter a degree in Celsius: ");
         int number = int.Parse(Console.ReadLine()); 
         double CtF = CelsiusToFahrenheit(number);
         Console.WriteLine("the degree in Fahrenheit is :  " + CtF);
-        
+        */
         
 
 
