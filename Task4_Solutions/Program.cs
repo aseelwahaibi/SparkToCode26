@@ -47,9 +47,17 @@ class Program
 
     }
     
-    
-    
-         
+    //Task 6 - Rectangle Area & Perimeter Functions
+    //Area 
+    public static double CalculateArea(double L, double W)
+    {
+        return L * W;
+    }
+
+    public static double CalculatePerimeter(double L, double W)
+    {
+        return 2* (L + W);
+    }    
     
     static void Main(string[] args)
     {
@@ -78,6 +86,7 @@ class Program
        // PrintMenu();
        
        //task 5 
+       /*
        Console.Write("Enter a number: ");
        int number = int.Parse(Console.ReadLine());
 
@@ -92,10 +101,16 @@ class Program
        {
            Console.WriteLine("false its an odd number");
        }
+*/
 
+//task 6 
+        Console.Write("Enter the length of Rectangle:  ");
+        double L = double.Parse(Console.ReadLine());
+        
+        Console.Write("Enter the Width of Rectangle: ");
+        double W = double.Parse(Console.ReadLine());
 
-
-
-
+      Console.WriteLine("The area of Rectangle:" + CalculateArea(L,W));
+      Console.WriteLine("The area of Perimeter:" + CalculatePerimeter(L,W));
     }
 }
