@@ -30,7 +30,7 @@ class Program
      ///////////////////////////////////////
      
      //Task 2 - Dynamic To-Do List
-     
+     /*
      List<string> todo = new List<string>();
      todo.Add("finish today tasks");
      todo.Add("watch recorded session");
@@ -50,6 +50,23 @@ class Program
      {
          Console.WriteLine("- "+task);
      }
+     */
+     
+     ////////////////////////////
+     // Task 3 - Browsing History Stack
+     
+     Stack<string> browsing =  new Stack<string>();
+     int counter = 0;
+
+     for (counter = 0; counter < 3; counter++)
+     {
+         Console.WriteLine("enter a website URL: " + (counter + 1));
+         string websiteURL = Console.ReadLine();
+         browsing.Push(websiteURL);
+     }
+     
+     string browsingURL = browsing.Pop();
+     Console.WriteLine("You went back from:  "+browsingURL);
      
     }
 }
