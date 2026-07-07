@@ -85,7 +85,16 @@ class Program
         }
     }
 
+//Task 8 - Countdown Function
 
+    public static void   Countdown(int number)
+    {
+        int counter = number;
+        for (counter = number; counter >= 1; counter--)
+        {
+            Console.WriteLine(counter);
+        }
+    }
 
 
 
@@ -150,14 +159,20 @@ class Program
       Console.WriteLine("The area of Perimeter:" + CalculatePerimeter(L,W));
     }
     */
-        
+        //task 7
+        /*
         Console.WriteLine(" enter your grade in number ");
         int grade = int.Parse(Console.ReadLine());
         
         Console.WriteLine(" your grade in letter is :  " + GetGradeLetter(grade));
+*/
+        
+        
 
-
-
+     //task 8 
+     Console.Write("enter a number to countdown: ");
+     int number = int.Parse(Console.ReadLine());
+     Countdown(number);
 
 
 
