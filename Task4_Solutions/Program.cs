@@ -59,58 +59,110 @@ class Program
         return 2* (L + W);
     }    
     
+    //Task 7 - Grade Letter Function 
+    public static string GetGradeLetter(int grade)
+    {
+        if (grade >= 80)
+        {
+            return "A";
+        }
+        else if (grade >= 70)
+        {
+            return "B";
+        }
+        else if (grade >= 65)
+        {
+            return "C";
+        }
+        else if (grade >= 50)
+        {
+            return "D";
+        }
+        else 
+        {
+            return "F";
+            
+        }
+    }
+
+
+
+
+
+
+
+
+
+
     static void Main(string[] args)
     {
         //PrintWelcome("Aseel"); task 1
-        
+
         /*
-         -task 2 
+         -task 2
         Console.Write("Enter a number: ");
         int number = int.Parse(Console.ReadLine());
         int square = Square(number);
         Console.WriteLine(square);
-        
+
         */
-        
-        
+
+
         /*
          task 3
         Console.Write("Enter a degree in Celsius: ");
-        int number = int.Parse(Console.ReadLine()); 
+        int number = int.Parse(Console.ReadLine());
         double CtF = CelsiusToFahrenheit(number);
         Console.WriteLine("the degree in Fahrenheit is :  " + CtF);
         */
-        
-        
+
+
         //Task 4 
-       // PrintMenu();
-       
-       //task 5 
-       /*
-       Console.Write("Enter a number: ");
-       int number = int.Parse(Console.ReadLine());
+        // PrintMenu();
 
-       bool even = IsEven(number);
+        //task 5 
+        /*
+        Console.Write("Enter a number: ");
+        int number = int.Parse(Console.ReadLine());
 
-       if (even)
-       {
-           Console.WriteLine("true its a even number");
-           
-       }
-       else
-       {
-           Console.WriteLine("false its an odd number");
-       }
-*/
+        bool even = IsEven(number);
+
+        if (even)
+        {
+            Console.WriteLine("true its a even number");
+
+        }
+        else
+        {
+            Console.WriteLine("false its an odd number");
+        }
+ */
 
 //task 6 
+/*
         Console.Write("Enter the length of Rectangle:  ");
         double L = double.Parse(Console.ReadLine());
-        
+
         Console.Write("Enter the Width of Rectangle: ");
         double W = double.Parse(Console.ReadLine());
 
       Console.WriteLine("The area of Rectangle:" + CalculateArea(L,W));
       Console.WriteLine("The area of Perimeter:" + CalculatePerimeter(L,W));
+    }
+    */
+        
+        Console.WriteLine(" enter your grade in number ");
+        int grade = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine(" your grade in letter is :  " + GetGradeLetter(grade));
+
+
+
+
+
+
+
+
+
     }
 }
