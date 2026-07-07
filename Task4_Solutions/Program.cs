@@ -39,6 +39,15 @@ class Program
     }
     
     
+    //Task 5 - Even or Odd Function
+
+    public static bool  IsEven(int number)
+    {
+        return number % 2 == 0;
+
+    }
+    
+    
     
          
     
@@ -66,8 +75,26 @@ class Program
         
         
         //Task 4 
-        PrintMenu();
-        
+       // PrintMenu();
+       
+       //task 5 
+       Console.Write("Enter a number: ");
+       int number = int.Parse(Console.ReadLine());
+
+       bool even = IsEven(number);
+
+       if (even)
+       {
+           Console.WriteLine("true its a even number");
+           
+       }
+       else
+       {
+           Console.WriteLine("false its an odd number");
+       }
+
+
+
 
 
     }
