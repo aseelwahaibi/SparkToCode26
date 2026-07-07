@@ -2,14 +2,44 @@
 
 class Program
 {
+    //task1 - Personalized Welcome Function
     public static void PrintWelcome(string name)
     {
         Console.WriteLine("Welcome "+name);
     }
     
+    //Task 2 - Square Number Function
+    public int Square(int number)
+    {
+        return number * number;
+    }
+    
+    //Task 3 - Celsius to Fahrenheit Function
+    static double  CelsiusToFahrenheit(double number)
+    {
+        return (number * 9 / 5) + 32; 
+    }
+         
     
     static void Main(string[] args)
     {
-        PrintWelcome("Aseel");
+        //PrintWelcome("Aseel");
+        
+        /*
+        Console.Write("Enter a number: ");
+        int number = int.Parse(Console.ReadLine());
+        int square = Square(number);
+        Console.WriteLine(square);
+        
+        */
+        
+        Console.Write("Enter a degree in Celsius: ");
+        int number = int.Parse(Console.ReadLine()); 
+        double CtF = CelsiusToFahrenheit(number);
+        Console.WriteLine("the degree in Fahrenheit is :  " + CtF);
+        
+        
+
+
     }
 }
