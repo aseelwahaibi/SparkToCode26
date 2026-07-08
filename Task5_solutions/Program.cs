@@ -69,7 +69,9 @@ class Program
      Console.WriteLine("You went back from:  "+browsingURL);
      */
      
+     ///////////////////////////////////////////////////
      //Task 4 - Customer Service Queue
+     /*
      Queue<string> customers = new Queue<string>();
      int counter = 0;
 
@@ -84,6 +86,48 @@ class Program
      string servedCustomer = customers.Dequeue();
      Console.WriteLine("Customer served: " + servedCustomer);
      
+     */
+     /////////////////////////////////////////////////////////
      
+     //Task 5 - Array Grade Range
+
+     int[] grades = new int[5];
+    
+     int counter = 0;
+     for (counter = 0; counter <grades.Length; counter++)
+     {
+         Console.WriteLine("enter grade : " + (counter + 1));
+         grades[counter] = int.Parse(Console.ReadLine());
+         
+     }
+     
+     
+     Array.Sort(grades);
+
+     int sum = 0;
+
+     for (int counter = 0; counter < grades.Length; counter++)
+     {
+         sum += grades[counter];
+     }
+     
+     int max = Math.Max( grades[5]);
+     int min = Math.Min(counter, grades[0]);
+     int avg = (max + min) / 2;
+     
+     
+     Console.WriteLine("maximum grade is: " + max);
+     Console.WriteLine("minimum grade is: " + min);
+     Console.WriteLine("avg grade is: " + avg);
+
+
+
+
+
+
+
+
+
+
     }
 }
