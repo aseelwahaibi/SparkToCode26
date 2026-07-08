@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 
-namespace SparkToCode26;
+namespace Task3_Solutions;
 
 class Program
 {
