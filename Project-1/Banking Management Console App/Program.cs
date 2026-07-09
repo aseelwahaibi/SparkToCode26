@@ -25,7 +25,8 @@ class Program
 
 
             int choice;
-
+            
+          
             try
             {
                 choice = int.Parse(Console.ReadLine());
@@ -88,6 +89,40 @@ class Program
                     balances[index] = balances[index] + amount;
                    Console.WriteLine("Updated Balance: " + balances[index]);
                     break;
+                
+                case 3:
+                    //Service 3 - Withdraw Money
+                    Console.Write("Please enter your account number: ");
+                    string ac = Console.ReadLine();
+                    int i = accountNumbers.IndexOf(ac);
+                    
+                    if (i < 0)
+                    {
+                        Console.WriteLine(" Error: Account not found.");
+                        return;
+                    }
+                    Console.Write("Enter withdrawal amount: ");
+                    int Withdrawal = int.Parse(Console.ReadLine());
+                    
+                    if (Withdrawal < 0 && Withdrawal > balances.Count )
+                    {
+                        Console.WriteLine(" Error: Withdrawal is invalid.");
+                    }
+                    
+                    balances[i] = balances[i] - Withdrawal;
+                    Console.WriteLine("Updated Balance: " + balances[i]);
+                    break;
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
 
                     
             }
