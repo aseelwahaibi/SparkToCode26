@@ -120,7 +120,7 @@ class Program
                     string sb = Console.ReadLine();
                     int ind = accountNumbers.IndexOf(sb);
                     
-                    if (ind < 0)
+                    if (ind < 0 )
                     {
                         Console.WriteLine(" Error: Account not found.");
                         return;
@@ -132,6 +132,58 @@ class Program
                     Console.WriteLine("Balance: " + balances[ind]);
                     break;
                 
+                case 5:
+                    //Service 5 - Transfer Amount
+                    Console.Write("Please enter sender account number: ");
+                    string senderAC = Console.ReadLine();
+                    int senderindex = accountNumbers.IndexOf(senderAC);
+                    
+                    if (senderindex < 0)
+                    {
+                        Console.WriteLine(" Error: Account not found.");
+                        return;
+                    }
+                    
+                    Console.Write("Please enter receiver account number: ");
+                    string receiverAC = Console.ReadLine();
+                    int receiverindex = accountNumbers.IndexOf(receiverAC);
+                    
+                    if (receiverindex < 0)
+                    {
+                        Console.WriteLine(" Error: Account not found.");
+                        return;
+                    }
+
+                    Console.WriteLine("enter the amount you want to transfer : ");
+                    int transferAmount = int.Parse(Console.ReadLine());
+
+                    if (balances[senderindex] < transferAmount)
+                    {
+                        Console.WriteLine("Error: the balance is in sufficient.");
+                        break;
+                    }
+                    
+                    balances[senderindex] = balances[senderindex] - transferAmount;
+
+                    balances[receiverindex] = balances[receiverindex] + transferAmount;
+                    
+                    Console.WriteLine("\n sender Account details ");
+                    Console.WriteLine("Customer Name: " + customerNames[senderindex]);
+                    Console.WriteLine("Account Number: " + accountNumbers[senderindex]);
+                    Console.WriteLine("Balance: " + balances[senderindex]); 
+                    
+                    Console.WriteLine("\n receiver Account details ");
+                    Console.WriteLine("Customer Name: " + customerNames[receiverindex]);
+                    Console.WriteLine("Account Number: " + accountNumbers[receiverindex]);
+                    Console.WriteLine("Balance: " + balances[receiverindex]); 
+                    
+                    break;
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
