@@ -19,7 +19,7 @@ class Program
             Console.WriteLine("4. Show Balance");
             Console.WriteLine("5. Transfer Amount");
             Console.WriteLine("6. Show All Accounts");
-            Console.WriteLine("7. <your 2nd custom service - choose a name>");
+            Console.WriteLine("7. total number of accounts");
             Console.WriteLine("8. Exit");
             Console.Write("Choose an option: ");
 
@@ -193,6 +193,13 @@ class Program
                 }
 
                 break;
+                
+                case 7: 
+                    //Service 7 - Count Total Accounts
+
+                    Console.WriteLine("Total number of accounts: " + accountNumbers.Count);
+
+                    break;
 
                     
                     
