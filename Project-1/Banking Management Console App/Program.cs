@@ -18,7 +18,7 @@ class Program
             Console.WriteLine("3. Withdraw Money");
             Console.WriteLine("4. Show Balance");
             Console.WriteLine("5. Transfer Amount");
-            Console.WriteLine("6. <your 1st custom service - choose a name>");
+            Console.WriteLine("6. Show All Accounts");
             Console.WriteLine("7. <your 2nd custom service - choose a name>");
             Console.WriteLine("8. Exit");
             Console.Write("Choose an option: ");
@@ -178,6 +178,22 @@ class Program
                     Console.WriteLine("Balance: " + balances[receiverindex]); 
                     
                     break;
+                
+                case 6:
+                // Service 6 - Show All Accounts
+                
+                Console.WriteLine("\n===== All Accounts =====");
+
+                for (int all = 0; all < accountNumbers.Count; all++)
+                {
+                    Console.WriteLine("\nAccount " + (all + 1));
+                    Console.WriteLine("Customer Name: " + customerNames[all]);
+                    Console.WriteLine("Account Number: " + accountNumbers[all]);
+                    Console.WriteLine("Balance: " + balances[all]);
+                }
+
+                break;
+
                     
                     
                     
