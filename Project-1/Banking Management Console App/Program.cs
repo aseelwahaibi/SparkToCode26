@@ -113,8 +113,25 @@ class Program
                     Console.WriteLine("Updated Balance: " + balances[i]);
                     break;
                     
+                case 4:
+                    //Service 4 - Show Balance
+                
+                    Console.Write("Please enter your account number: ");
+                    string sb = Console.ReadLine();
+                    int ind = accountNumbers.IndexOf(sb);
                     
+                    if (ind < 0)
+                    {
+                        Console.WriteLine(" Error: Account not found.");
+                        return;
+                    }
                     
+                    Console.WriteLine("\n customer Account details ");
+                    Console.WriteLine("Customer Name: " + customerNames[ind]);
+                    Console.WriteLine("Account Number: " + accountNumbers[ind]);
+                    Console.WriteLine("Balance: " + balances[ind]);
+                    break;
+                
                     
                     
                     
