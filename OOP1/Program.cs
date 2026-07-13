@@ -135,7 +135,9 @@ class Program
         static Student student1 = new Student { Name = "Ali", Address = "Muscat", Grade = 65 };
         static Student student2 = new Student { Name = "Ahmed", Address = "Muscat", Grade = 70 };
         static Product product1 = new Product { ProductName = "Wireless Mouse", Price = 5.500, StockQuantity = 50 };
-        static Product product2 = new Product { ProductName = "Mechanical Keyboard", Price = 15.750, StockQuantity = 20 };
+
+        static Product product2 = new Product
+            { ProductName = "Mechanical Keyboard", Price = 15.750, StockQuantity = 20 };
 
 
         static void Main(string[] args)
@@ -232,7 +234,7 @@ class Program
         }
 
         //case 2
-        
+
         static void UpdateStudentAddress()
         {
             Console.WriteLine("\n--- Update Student Address ---");
@@ -240,14 +242,14 @@ class Program
             Console.WriteLine("1. " + student1.Name + " (Current: " + student1.Address + ")");
             Console.WriteLine("2. " + student2.Name + " (Current: " + student2.Address + ")");
             Console.Write("Choose an option (1 or 2): ");
-            
+
             string input = Console.ReadLine();
 
             if (input == "1")
             {
                 Console.Write("Enter new address for " + student1.Name + ": ");
                 string newAddress = Console.ReadLine(); // Read directly into a normal string
-        
+
                 student1.Address = newAddress; // Save it directly
                 Console.WriteLine("Confirmation: " + student1.Name + "'s address updated to " + student1.Address + ".");
             }
@@ -255,7 +257,7 @@ class Program
             {
                 Console.Write("Enter new address for " + student2.Name + ": ");
                 string newAddress = Console.ReadLine(); // Read directly into a normal string
-        
+
                 student2.Address = newAddress; // Save it directly
                 Console.WriteLine("Confirmation: " + student2.Name + "'s address updated to " + student2.Address + ".");
             }
@@ -263,13 +265,52 @@ class Program
             {
                 Console.WriteLine("Invalid choice.");
             }
-            
+
         }
-        
+            //case 3
+        static void MakeDeposit()
+        {
+            Console.WriteLine("\n--- Make a Deposit ---");
+            Console.WriteLine("Which account would you like to deposit into?");
+            Console.WriteLine("1. Account 1 (" + account1.HolderName + ")");
+            Console.WriteLine("2. Account 2 (" + account2.HolderName + ")");
+            Console.Write("Choose an option (1 or 2): ");
+            
+            string input = Console.ReadLine();
+
+            if (input == "1")
+            {
+                Console.Write("Enter deposit amount: ");
+                string amountInput = Console.ReadLine();
+                double depositAmount = double.Parse(amountInput);
+                
+                account1.Deposit(depositAmount);
+                
+                Console.WriteLine("Account Holder: " + account1.HolderName + " | Updated Balance: " + account1.Balance);
+                
+            }
+            else if (input == "2")
+            {
+                Console.Write("Enter deposit amount: ");
+                string amountInput = Console.ReadLine();
+                double depositAmount = double.Parse(amountInput);
+                
+                account2.Deposit(depositAmount);
+                Console.WriteLine("Account Holder: " + account2.HolderName + " | Updated Balance: " + account2.Balance);
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice.");
+            }
+            
+            
+
+        }
 
 
 
-
+    }
+}
 
 
                         
