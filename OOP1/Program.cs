@@ -1,4 +1,6 @@
-﻿namespace OOP1;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace OOP1;
 
 class Program
 {
@@ -118,52 +120,19 @@ class Program
             //class program 
             public class Program
             {
-                static BankAccount account1 = new BankAccount
-                {
-                    AccountNumber = 1163,
-                    HolderName = "karim",
-                    Balance = 120
-                };
-
-                static BankAccount account2 = new BankAccount
-                {
-                    AccountNumber = 15203,
-                    HolderName = "Ali",
-                    Balance = 63
-                };
+                static BankAccount account1 = new BankAccount { AccountNumber = 1163, HolderName = "karim", Balance = 120 };
+                static BankAccount account2 = new BankAccount { AccountNumber = 15203, HolderName = "Ali", Balance = 63 };
+                
+                static Student student1 = new Student { Name = "Ali", Address = "Muscat", Grade = 65 };
+                static Student student2 = new Student { Name = "Ahmed", Address = "Muscat", Grade = 70 };
+                
+                static Product product1 = new Product {ProductName = "Wireless Mouse", Price= 5.500 , StockQuantity = 50 };
+                static Product product2 = new Product {ProductName = "Mechanical Keyboard", Price= 15.750 , StockQuantity = 20 };
                 
                 
-                // Students
-                static Student student1 = new Student
-                {
-                    Name = "Ali",
-                    Address = "Muscat",
-                    Grade = 65
-                };
-
-                static Student student2 = new Student
-                {
-                    Name = "Ahmed",
-                    Address = "Muscat",
-                    Grade = 70
-                };
                 
-                // Products
-                static Product product1 = new Product
-                {
-                    ProductName = "Wireless Mouse",
-                    Price = 5.500,
-                    StockQuantity = 50
-                };
-
-                static Product product2 = new Product
-                {
-                    ProductName = "Mechanical Keyboard",
-                    Price = 15.750,
-                    StockQuantity = 20
-                };
-
                 
+               
                 
             }
             
@@ -178,18 +147,43 @@ class Program
     }
     static void Main(string[] args)
     {
-        //Accounts 
-        BankAccount account1 = new BankAccount();
-        BankAccount account2 = new BankAccount();
+        bool exitApp=false;
 
-        account1.AccountNumber = 1163;
-        account1.HolderName = "Karim";
-        account1.Balance = 120;
-
-        account2.AccountNumber = 15203;
-        account2.HolderName = "Ali";
-        account2.Balance = 63;
+        while (exitApp == false)
+        {
+            Console.WriteLine("\n =========Welcome to OOP1!========");
+            Console.WriteLine("1.View Account Details");
+            Console.WriteLine("2.Update Student Address");
+            Console.WriteLine("3.Make a Deposit");
+            Console.WriteLine("4.Make a Withdrawal");
+            Console.WriteLine("5.View Product Details");
+            Console.WriteLine("6.Register a Student");
+            Console.WriteLine("7.Compare Two Account Balances");
+            Console.WriteLine("8.Restock Product & Stock Level Check");
+            Console.WriteLine("9.exit");
+            Console.Write("choose an option:   ");
+            
+        }
         
+        int choice;
+
+        try
+        {
+            choice = int.Parse(Console.ReadLine());
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Invalid input.");
+            continue;
+        }
+
+        switch (choice)
+        {
+           case 1:ViweAccountDetails();
+            break;
+           
+           case 2:
+        }
         
 
     }
