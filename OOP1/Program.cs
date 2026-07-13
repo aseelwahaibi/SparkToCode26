@@ -344,7 +344,32 @@ class Program
 
         static void ViewProductDetails()
         {
+            Console.WriteLine("\n--- View Product Details ---");
+            Console.WriteLine("Which product would you like to view?");
+            Console.WriteLine("1. Product 1 (" + product1.ProductName + ")");
+            Console.WriteLine("2. Product 2 (" + product2.ProductName + ")");
+            Console.Write("Choose an option (1 or 2): ");
+
+            string input = Console.ReadLine();
+
+            if (input == "1")
+            {
+                double totalValue = product1.GetInventoryValue();
+                
+            }
             
+            else if (input == "2")
+            {
+                Console.WriteLine("\n--- Showing Product 2 Details & Inventory Value ---");
+                double totalValue = product2.GetInventoryValue();
+        
+                Console.WriteLine("Total Inventory Value: OMR " + totalValue);
+                
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice.");
+            }
         }
 
 
