@@ -180,10 +180,7 @@ class Program
                     case 3: MakeDeposit(); break;
                     case 4: MakeWithdrawal(); break;
                     case 5: ViewProductDetails(); break;
-                    case 6: RegisterStudent(); break;
-                    case 7: CompareAccountBalances(); break;
-                    case 8: RestockProduct(); break;
-                    case 9:
+                    case 6:
                         exitApp = true;
                         Console.WriteLine("Goodbye!");
                         break;
@@ -303,8 +300,51 @@ class Program
                 Console.WriteLine("Invalid choice.");
             }
             
-            
 
+        }
+        
+        //case 4 
+
+        static void MakeWithdrawal()
+        {
+            Console.WriteLine("\n--- Make a Withdrawal ---");
+            Console.WriteLine("Which account would you like to withdraw from?");
+            Console.WriteLine("1. Account 1 (" + account1.HolderName + ")");
+            Console.WriteLine("2. Account 2 (" + account2.HolderName + ")");
+            Console.Write("Choose an option (1 or 2): ");
+
+            string input = Console.ReadLine();
+
+            if (input == "1")
+            {
+                Console.Write("Enter withdrawal amount: ");
+                string amountInput = Console.ReadLine();
+                double withdrawAmount = double.Parse(amountInput);
+
+                account1.Withdraw(withdrawAmount);
+                Console.WriteLine("Updated Balance for " + account1.HolderName + ": " + account1.Balance);
+            }
+            else if (input == "2")
+            {
+                Console.Write("Enter withdrawal amount: ");
+                string amountInput = Console.ReadLine();
+                double withdrawAmount = double.Parse(amountInput);
+                
+                account2.Withdraw(withdrawAmount);
+                
+                Console.WriteLine("Updated Balance for " + account2.HolderName + ": " + account2.Balance);
+                
+            }
+            
+            else
+            {
+                Console.WriteLine("Invalid choice.");
+            }
+        }
+
+        static void ViewProductDetails()
+        {
+            
         }
 
 
