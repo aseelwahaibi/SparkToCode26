@@ -266,7 +266,11 @@ class Program
                     Console.WriteLine("Total Hotel Rooms: " + rooms.Count());
                     
                     var sortedRooms = rooms.OrderBy(r => r.RoomNumber);
-                    
+                    foreach (var room in sortedRooms)
+                    {
+                        room.DisplayRoom();
+                    }
+                    break;
                 
             }
         }
