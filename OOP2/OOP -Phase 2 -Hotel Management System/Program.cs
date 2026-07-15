@@ -42,20 +42,29 @@ class Program
     public class Guest
     {
 
-        public int GuestId { get; set; }
+        public string GuestId { get; set; }
         public string GuestName { get; set; }
         public int RoomNumber { get; set; }
         public DateTime CheckInDate { get; set; }
         public int TotalNights { get; set; }
 
 
-        public Guest(int guestId, string guestName, int roomNumber, int totalNights)
+        public Guest(string guestId, string guestName, string checkInDate, int totalNights)
         {
             GuestId = guestId;
             GuestName = guestName;
-            RoomNumber = roomNumber;
-            CheckInDate = DateTime.Now;
+            RoomNumber = 0; 
             TotalNights = totalNights;
+            
+            DateTime parsedDate;
+            if (DateTime.TryParse(checkInDate, out parsedDate))
+            {
+                CheckInDate = parsedDate;
+            }
+            else
+            {
+                CheckInDate = DateTime.Now; 
+            }
         }
 
         //methods 
@@ -154,6 +163,36 @@ class Program
                                       newPrice.ToString("F2") + " per night.");
                     Console.WriteLine("Total Rooms now in System: " + rooms.Count);
                     break;
+                
+                case "2":
+                    Console.Write("Enter Guest Name: ");
+                    string nameInput = Console.ReadLine();
+
+                    Console.Write("Enter Check-In Date (e.g. DD/MM/YYYY): ");
+                    string dateInput = Console.ReadLine();
+
+                    Console.Write("Enter Number of Nights: ");
+                    int nightsInput;
+                    if (!int.TryParse(Console.ReadLine(), out nightsInput) || nightsInput <= 0)
+                    {
+                        Console.WriteLine("Error: Nights must be a positive integer.");
+                        break;
+                    }
+                    
+                    int nextNumber = guests.Count + 1;
+                    string generatedId = "G" + nextNumber.ToString("D3");
+                    
+                    Guest newGuest = new Guest(generatedId, nameInput, dateInput, nightsInput);
+                    guests.Add(newGuest);
+
+                    Console.WriteLine("Confirmation: Guest Registered!");
+                    Console.WriteLine("Assigned ID: " + newGuest.GuestId);
+                    Console.WriteLine("Name: " + newGuest.GuestName);
+                    Console.WriteLine("Check-In: " + newGuest.CheckInDate);
+                    Console.WriteLine("Nights: " + newGuest.TotalNights);
+                    Console.WriteLine("Room Assignment: " + newGuest.RoomNumber);
+                    break;
+                    
                 
             }
         }
