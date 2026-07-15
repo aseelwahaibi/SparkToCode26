@@ -199,6 +199,62 @@ class Program
                     Console.WriteLine("Nights: " + newGuest.TotalNights);
                     Console.WriteLine("Room Assignment: " + roomDisplay);
                     break;
+                
+                
+                case "3":
+                    Console.Write("Enter Guest ID (e.g., G001): ");
+                    string searchGId = Console.ReadLine().ToUpper();
+
+                    
+                    Guest targetGuest = guests.FirstOrDefault(g => g.GuestId == searchGId);
+                    if (targetGuest == null)
+                    {
+                        Console.WriteLine("Error: Guest not found!");
+                        break;
+                    }
+
+                    Console.Write("Enter Room Number to book: ");
+                    int searchRNum;
+                    if (!int.TryParse(Console.ReadLine(), out searchRNum))
+                    {
+                        Console.WriteLine("Error: Invalid room number format.");
+                        break;
+                    }
+
+                    
+                    Room targetRoom = rooms.FirstOrDefault(r => r.RoomNumber == searchRNum);
+                    if (targetRoom == null)
+                    {
+                        Console.WriteLine("Error: Room not found!");
+                        break;
+                    }
+
+                    
+                    if (targetRoom.IsAvailable == false)
+                    {
+                        Console.WriteLine("Room is already booked.");
+                        break;
+                    }
+
+                   
+                    targetGuest.RoomNumber = targetRoom.RoomNumber;
+                    targetRoom.IsAvailable = false;
+
+                    
+                    double totalCost = targetGuest.CalculateTotalCost(targetRoom.PricePerNight);
+
+                    
+                    Console.WriteLine("\n================================================");
+                    Console.WriteLine("BOOKING CONFIRMED SUCCESSFUL");
+                    Console.WriteLine("================================================");
+                    Console.WriteLine("Guest Name: " + targetGuest.GuestName);
+                    Console.WriteLine("Room Number: #" + targetGuest.RoomNumber);
+                    Console.WriteLine("Room Type: " + targetRoom.RoomType);
+                    Console.WriteLine("Price Per Night: OMR " + targetRoom.PricePerNight.ToString("F2"));
+                    Console.WriteLine("Total Nights: " + targetGuest.TotalNights);
+                    Console.WriteLine("Total Cost: OMR " + totalCost.ToString("F2"));
+                    Console.WriteLine("================================================");
+                    break;
                     
                 
             }
