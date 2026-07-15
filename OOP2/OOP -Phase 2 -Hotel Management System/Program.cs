@@ -282,6 +282,13 @@ class Program
                     Console.WriteLine("Total Registered Guests: " + guests.Count());
                     var sortedGuests = guests.OrderBy(g => g.GuestName);
                     
+                    foreach (var guest in sortedGuests)
+                    {
+                        guest.DisplayGuest();
+                    }
+                    
+                    break;
+                    
                 
             }
         }
