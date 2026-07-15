@@ -279,6 +279,8 @@ class Program
                         break;
                     }
                     
+                    Console.WriteLine("Total Registered Guests: " + guests.Count());
+                    
                 
             }
         }
