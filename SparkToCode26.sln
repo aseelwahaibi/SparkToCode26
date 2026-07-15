@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskk2_Solutions", "Taskk2_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4_Solutions", "Task4_Solutions\Task4_Solutions.csproj", "{5F5E67BA-6F0C-415D-861B-83B83B9F1FDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP -Phase 2 -Hotel Management System", "OOP2\OOP -Phase 2 -Hotel Management System\OOP -Phase 2 -Hotel Management System.csproj", "{D2163B49-F131-40C4-A8C8-F53BA42913C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5F5E67BA-6F0C-415D-861B-83B83B9F1FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F5E67BA-6F0C-415D-861B-83B83B9F1FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F5E67BA-6F0C-415D-861B-83B83B9F1FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2163B49-F131-40C4-A8C8-F53BA42913C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2163B49-F131-40C4-A8C8-F53BA42913C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2163B49-F131-40C4-A8C8-F53BA42913C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2163B49-F131-40C4-A8C8-F53BA42913C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
