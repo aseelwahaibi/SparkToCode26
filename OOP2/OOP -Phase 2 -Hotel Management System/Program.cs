@@ -36,7 +36,7 @@ class Program
                 Console.WriteLine("Room #" + RoomNumber + " | Type: " + RoomType + " | Price: $" + PricePerNight + "/night | Status: " + availability);
             }
         }
-    
+   
         // class guest 
         public class Guest
         {
@@ -73,6 +73,8 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        //system list 
+        List<Room> rooms = new List<Room>();
+        List<Guest> guests = new List<Guest>();
     }
 }
