@@ -265,6 +265,8 @@ class Program
                     
                     Console.WriteLine("Total Hotel Rooms: " + rooms.Count());
                     
+                    var sortedRooms = rooms.OrderBy(r => r.RoomNumber);
+                    
                 
             }
         }
