@@ -182,15 +182,22 @@ class Program
                     int nextNumber = guests.Count + 1;
                     string generatedId = "G" + nextNumber.ToString("D3");
                     
+                    // This now matches the constructor perfectly!
                     Guest newGuest = new Guest(generatedId, nameInput, dateInput, nightsInput);
                     guests.Add(newGuest);
+
+                    string roomDisplay = "Not Assigned";
+                    if (newGuest.RoomNumber != 0)
+                    {
+                        roomDisplay = "#" + newGuest.RoomNumber;
+                    }
 
                     Console.WriteLine("Confirmation: Guest Registered!");
                     Console.WriteLine("Assigned ID: " + newGuest.GuestId);
                     Console.WriteLine("Name: " + newGuest.GuestName);
-                    Console.WriteLine("Check-In: " + newGuest.CheckInDate);
+                    Console.WriteLine("Check-In: " + newGuest.CheckInDate.ToShortDateString());
                     Console.WriteLine("Nights: " + newGuest.TotalNights);
-                    Console.WriteLine("Room Assignment: " + newGuest.RoomNumber);
+                    Console.WriteLine("Room Assignment: " + roomDisplay);
                     break;
                     
                 
