@@ -263,6 +263,7 @@ class Program
                         break;
                     }
                     
+                    Console.WriteLine("Total Hotel Rooms: " + rooms.Count());
                     
                 
             }
