@@ -76,5 +76,44 @@ class Program
         //system list 
         List<Room> rooms = new List<Room>();
         List<Guest> guests = new List<Guest>();
+        
+        //rooms 
+        rooms.Add(new Room(101, "Single", 75.00));
+        rooms.Add(new Room(102, "Single", 75.00));
+        rooms.Add(new Room(201, "Double", 120.00));
+        rooms.Add(new Room(202, "Double", 120.00));
+        rooms.Add(new Room(301, "Suite", 250.00));
+        rooms.Add(new Room(302, "Suite", 250.00));
+        
+        int nextGustId = 1;
+        bool running = true;
+        
+        while (running)
+        {
+            // Main Menu Blueprint
+            Console.WriteLine("\n================================================");
+            Console.WriteLine("GRAND VISTA HOTEL — MANAGEMENT SYSTEM");
+            Console.WriteLine("================================================");
+            Console.WriteLine("1. Add New Room");
+            Console.WriteLine("2. Register New Guest");
+            Console.WriteLine("3. Book a Room for a Guest");
+            Console.WriteLine("4. View All Rooms");
+            Console.WriteLine("5. View All Guests");
+            Console.WriteLine("6. Search & Filter Rooms");
+            Console.WriteLine("7. Guest & Booking Statistics");
+            Console.WriteLine("8. Update Room Price");
+            Console.WriteLine("9. Guest Lookup by Name");
+            Console.WriteLine("10. Room Type Breakdown Report");
+            Console.WriteLine("11. Check Out a Guest");
+            Console.WriteLine("12. Remove Unavailable Rooms");
+            Console.WriteLine("13. Extend Guest Stay");
+            Console.WriteLine("14. Highest Revenue Booking");
+            Console.WriteLine("15. Guest Pagination Viewer");
+            Console.WriteLine("0. Exit");
+            Console.WriteLine("================================================");
+            Console.Write("Enter your choice: ");
+
+            string choice = Console.ReadLine();
+            Console.WriteLine();
     }
 }
