@@ -256,6 +256,14 @@ class Program
                     Console.WriteLine("================================================");
                     break;
                     
+                case "4":
+                    if (rooms.Count == 0)
+                    {
+                        Console.WriteLine("No rooms have been added yet.");
+                        break;
+                    }
+                    
+                    
                 
             }
         }
