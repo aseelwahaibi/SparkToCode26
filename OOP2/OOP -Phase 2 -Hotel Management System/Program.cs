@@ -280,6 +280,7 @@ class Program
                     }
                     
                     Console.WriteLine("Total Registered Guests: " + guests.Count());
+                    var sortedGuests = guests.OrderBy(g => g.GuestName);
                     
                 
             }
