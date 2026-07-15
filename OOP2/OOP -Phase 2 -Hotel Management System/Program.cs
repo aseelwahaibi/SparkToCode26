@@ -272,6 +272,14 @@ class Program
                     }
                     break;
                 
+                case "5":
+                    if (guests.Count == 0)
+                    {
+                        Console.WriteLine("No guests have been registered yet.");
+                        break;
+                    }
+                    
+                
             }
         }
     }
