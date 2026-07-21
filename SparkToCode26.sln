@@ -6,6 +6,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskk2_Solutions", "Taskk2_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4_Solutions", "Task4_Solutions\Task4_Solutions.csproj", "{5F5E67BA-6F0C-415D-861B-83B83B9F1FDB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{D6536DB2-4073-4755-B989-9BE8F1830C1A}"
+	ProjectSection(SolutionItems) = preProject
+		DBtasks\Company Database.drawio.png = DBtasks\Company Database.drawio.png
+		DBtasks\College Management System.drawio.png = DBtasks\College Management System.drawio.png
+		DBtasks\Airline Information System.drawio.png = DBtasks\Airline Information System.drawio.png
+		DBtasks\Case1.drawio.png = DBtasks\Case1.drawio.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
