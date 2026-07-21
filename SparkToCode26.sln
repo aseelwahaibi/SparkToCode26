@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{D6536DB2-4073-
 		DBtasks\College Management System.drawio.png = DBtasks\College Management System.drawio.png
 		DBtasks\Airline Information System.drawio.png = DBtasks\Airline Information System.drawio.png
 		DBtasks\Case1.drawio.png = DBtasks\Case1.drawio.png
+		DBtasks\CMS mapping .drawio.png = DBtasks\CMS mapping .drawio.png
+		DBtasks\COMPANY mapping.drawio-2.png = DBtasks\COMPANY mapping.drawio-2.png
 	EndProjectSection
 EndProject
 Global
